@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPAW Week 6 - DOM, Event Handling & Fetch API</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Tugas PPAW Week 6</h1>
+    <p>Praktikum JavaScript DOM, Event Handling, dan Fetch API</p>
+  </header>
+
+  <main>
+    <!-- IMPLEMENTASI 1: FETCH API (DATA PRODUK) -->
+    <section class="section-card">
+      <h2>1. Daftar Produk (Fetch API)</h2>
+      
+      <!-- Area untuk menampilkan status loading / error -->
+      <div id="loading-status" class="status-message">Memuat data produk...</div>
+
+      <!-- Kontainer tempat kartu produk akan di-render oleh JS -->
+      <div id="product-container" class="product-grid"></div>
+    </section>
+
+    <!-- IMPLEMENTASI 2: FORM INTERAKTIF (DOM & EVENT HANDLING) -->
+    <section class="section-card">
+      <h2>2. Form Input Interaktif</h2>
+      
+      <form id="user-form">
+        <div class="form-group">
+          <label for="username">Nama Lengkap:</label>
+          <input type="text" id="username" placeholder="Masukkan nama kamu">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Alamat Email:</label>
+          <input type="email" id="email" placeholder="contoh@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="feedback-text">Pesan / Catatan:</label>
+          <textarea id="feedback-text" rows="4" placeholder="Tuliskan pesan kamu di sini..."></textarea>
+        </div>
+
+        <button type="submit" id="submit-btn">Kirim Data</button>
+      </form>
+
+      <!-- Area untuk menampilkan pesan umpan balik / hasil pemrosesan form -->
+      <div id="form-feedback" class="feedback-box hidden"></div>
+    </section>
+  </main>
+
+  <!-- Script dipisah menjadi fetch.js dan form.js -->
+  <script src="fetch.js"></script>
+  <script src="form.js"></script>
+</body>
+</html>
